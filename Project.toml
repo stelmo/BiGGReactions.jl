@@ -3,8 +3,21 @@ uuid = "0f8c7381-4745-4de4-ab54-b92c670edbdd"
 authors = ["St. Elmo Wilken <stelmozors@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Scratch = "6c6a2e73-6563-6170-7368-637461726353"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+Term = "22787eb5-b846-44ae-b979-8e399b8463ab"
+
 [compat]
-julia = "1"
+DocStringExtensions = "0.9"
+HTTP = "1.2"
+JSON = "0.21"
+Scratch = "1.1"
+Term = "1.0"
+julia = "1.7, 1.8"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
