@@ -8,6 +8,14 @@ This is a simple package to automatically download BiGG reactions and metabolite
 the [BiGG website](http://bigg.ucsd.edu/). It automatically caches responses to speed up 
 repeated requests.
 
+You can get information about a reaction from the universal model using its ID:
+```julia
+rxn = get_reaction("PFL")
+```
+And you can get information about a metabolite from the universal model through its ID:
+```julia
+met = get_metabolite("h2o")
+```
 You can test the package with:
 ```julia
 ] test

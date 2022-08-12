@@ -1,6 +1,6 @@
 module BiGGReactions
 
-using HTTP, JSON, DocStringExtensions, Scratch, Serialization
+using HTTP, JSON, DocStringExtensions, Scratch, Serialization, Term
 using Term.Repr
 
 # cache data using Scratch.jl

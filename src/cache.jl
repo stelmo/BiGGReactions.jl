@@ -6,6 +6,7 @@ Clear the entire cache.
 clear_cache!() = begin
     for dir in readdir(cache_location)
         rm(joinpath(cache_location, dir), recursive = true)
+        mkdir(joinpath(cache_location, dir)) # add back the empty dir
     end
     isfile(joinpath(cache_location, "version.txt")) &&
     rm(joinpath(cache_location, "version.txt"))
