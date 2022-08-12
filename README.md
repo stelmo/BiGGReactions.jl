@@ -21,8 +21,8 @@ You can test the package with:
 ] test
 ```
 ### Troubleshooting
-The cache can be source of subtle issues. If you get errors or unexpected behavior do:
-1. `clear_cache!()`,
-2. Restart the Julia session.
-If you still get errors, please file an issue!
+The cache can be source of subtle issues. If you get errors or unexpected behavior try the following:
+1. `clear_cache!()`, restart the Julia session and, try again.
+2. If you still get issues, manually delete the cache files at `BiGGReactions.cache_location`, restart the Julia session, and try again.
+3. File an issue :/ 
 

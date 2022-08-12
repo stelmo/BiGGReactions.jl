@@ -7,11 +7,11 @@ a dictionary of the body of the request.
 function _read_parse_id(req::String)
     try 
         r = HTTP.request("GET", "http://bigg.ucsd.edu/api/v2/universal/$req")
+        r.status != 200 && return nothing
+        return JSON.parse(String(r.body)) 
     catch 
         return nothing
     end
-    r.status != 200 && return nothing
-    JSON.parse(String(r.body)) 
 end
 
 """

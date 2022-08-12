@@ -7,5 +7,5 @@
     @test met.formulas == ["H2O"]
 
     met = get_metabolite("h2ooooooooo")
-   @test isnothing(met) 
+    @test isnothing(met) 
 end
