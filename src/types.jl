@@ -1,3 +1,11 @@
+"""
+$(TYPEDEF)
+
+A struct for storing BiGG reaction information. Does not store the metabolite
+information execpt its ID. 
+
+$(FIELDS)
+"""
 @with_repr struct BiGGReaction 
     id :: String
     name :: String
@@ -5,6 +13,13 @@
     database_links :: Dict{String, Any}
 end
 
+"""
+$(TYPEDEF)
+
+A struct for storing BiGG metabolite information. 
+
+$(FIELDS)
+"""
 @with_repr struct BiGGMetabolite
     id :: String
     name :: String

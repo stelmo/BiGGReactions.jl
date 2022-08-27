@@ -4,12 +4,11 @@ $(TYPEDSIGNATURES)
 Clear the entire cache.
 """
 clear_cache!() = begin
-    for dir in readdir(cache_location)
-        rm(joinpath(cache_location, dir), recursive = true)
-        mkdir(joinpath(cache_location, dir)) # add back the empty dir
+    for dir in readdir(CACHE_LOCATION)
+        rm(joinpath(CACHE_LOCATION, dir), recursive = true)
+        dir != "version.txt" && mkdir(joinpath(CACHE_LOCATION, dir)) # add back the empty dir
     end
-    isfile(joinpath(cache_location, "version.txt")) &&
-    rm(joinpath(cache_location, "version.txt"))
+    write(joinpath(CACHE_LOCATION, "version.txt"), string(Base.VERSION))    
     Term.tprint("{blue} Cache cleared! {/blue}")
 end
 
@@ -19,7 +18,7 @@ $(TYPEDSIGNATURES)
 Checks if the reaction has been cached.
 """
 _is_cached(database::String, id) =
-    isfile(joinpath(BiGGReactions.cache_location, database, string(id)))
+    isfile(joinpath(BiGGReactions.CACHE_LOCATION, database, string(id)))
 
 """
 $(TYPEDSIGNATURES)
@@ -27,7 +26,7 @@ $(TYPEDSIGNATURES)
 Return the cached reaction object.
 """
 _get_cache(database::String, id) =
-    deserialize(joinpath(cache_location, database, string(id)))
+    deserialize(joinpath(CACHE_LOCATION, database, string(id)))
 
 """
 $(TYPEDSIGNATURES)
@@ -35,4 +34,4 @@ $(TYPEDSIGNATURES)
 Cache reaction object.
 """
 _cache(database::String, id, item) =
-    serialize(joinpath(cache_location, database, string(id)), item)
+    serialize(joinpath(CACHE_LOCATION, database, string(id)), item)

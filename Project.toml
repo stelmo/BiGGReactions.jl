@@ -1,7 +1,7 @@
 name = "BiGGReactions"
 uuid = "0f8c7381-4745-4de4-ab54-b92c670edbdd"
 authors = ["St. Elmo Wilken <stelmozors@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -16,8 +16,8 @@ DocStringExtensions = "0.9"
 HTTP = "1.2"
 JSON = "0.21"
 Scratch = "1.1"
-Term = "1.0"
-julia = "1.7, 1.8"
+Term = "1.0.2"
+julia = "1.8"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
